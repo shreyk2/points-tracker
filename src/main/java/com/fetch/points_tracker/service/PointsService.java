@@ -6,7 +6,6 @@ import com.fetch.points_tracker.model.Transaction;
 import com.fetch.points_tracker.repository.PointsRepository;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
@@ -35,7 +34,6 @@ public class PointsService {
         }
         List<Transaction> allTransactions = pointsRepository.getAllTransactions();
         allTransactions.sort(Comparator.comparing(Transaction::getTimestamp)); // Sort oldest first
-
         List<Map<String, Object>> spentPoints = new ArrayList<>();
         int pointsToSpend = points;
 
