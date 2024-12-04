@@ -57,6 +57,11 @@ java -jar target/points-tracker-0.0.1-SNAPSHOT.jar
 
 The application should now be running on **http://localhost:8080**.
 
+## Code Breakdown
+
+All information about the code and it's functionalities can be found within the code, 
+and in `src/main/java/com.fetch.points_tracker/README.md`
+
 ## API Documentation
 
 This service exposes three main endpoints:
