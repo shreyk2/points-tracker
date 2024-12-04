@@ -152,7 +152,7 @@ This will force update all dependencies.
 - [Maven Documentation](https://maven.apache.org/guides/index.html)
 
 ## Author
-This project is maintained by **Shrey K**. For questions or feedback, please feel free to reach out via GitHub.
+This project is maintained by **Shrey K**. For questions or feedback, please feel free to reach out via email.
 
 ---
 
