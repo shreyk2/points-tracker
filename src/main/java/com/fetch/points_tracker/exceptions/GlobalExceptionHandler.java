@@ -11,6 +11,12 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    /**
+     * Handles invalid transaction exceptions.
+     *
+     * @param ex The InvalidTransactionException to handle.
+     * @return A response entity containing an error message and status.
+     */
     @ExceptionHandler(InvalidTransactionException.class)
     public ResponseEntity<Map<String, String>> handleInvalidTransaction(InvalidTransactionException ex) {
         Map<String, String> error = new HashMap<>();
@@ -18,6 +24,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 
+    /**
+     * Handles insufficient points exceptions.
+     *
+     * @param ex The InsufficientPointsException to handle.
+     * @return A response entity containing an error message and status.
+     */
     @ExceptionHandler(InsufficientPointsException.class)
     public ResponseEntity<Map<String, String>> handleInsufficientPoints(InsufficientPointsException ex) {
         Map<String, String> error = new HashMap<>();
@@ -25,6 +37,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 
+    /**
+     * Handles general exceptions.
+     *
+     * @param ex The Exception to handle.
+     * @return A response entity containing an error message and status.
+     */
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, String>> handleGeneralException(Exception ex) {
         Map<String, String> error = new HashMap<>();
